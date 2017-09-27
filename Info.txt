@@ -4,3 +4,7 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/Regener1/WebProgramming.git
 git push -u origin master
+
+добавить вместо quick links кнопку регистрации информацию о вошедшем, (возможно авторизация)
+
+коментирование постов добавить в самую последнюю очередь
