@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>
-
+		My forum
     </title>
 
     <meta charset="utf-8">
