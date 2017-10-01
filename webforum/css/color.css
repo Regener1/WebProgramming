@@ -1,0 +1,55 @@
+
+body {
+    background-color: #E8E8E8;
+}
+
+h5 {
+    color: #5C5C5C;
+}
+
+#wrap-nav{
+    background-color: #3C3C3C;
+}
+
+#wrap-footer {
+    background-color: #3C3C3C;
+
+}
+
+.dark {
+    background-color: #3C3C3C;
+}
+
+.blue {
+    background-color: #477BB8;
+}
+
+.light-gray {
+    background-color: #F5F5F5;
+}
+
+.footerblock > p,
+.footerblock > ul > li > a{
+    color: #DCDCDC;
+}
+
+.navmenu > li,
+.navmenu > li > a {
+    color: #DDD;
+}
+
+.dropdown-content,
+.dropdown-content > li,
+.dropdown-content > li > a{
+    color: #3C3C3C;
+    background-color: #FAFAFA;
+
+}
+
+ul.forums{
+    background-color: #FAFAFA;
+}
+
+.header {
+    color: #F5F5F5;
+}
