@@ -53,3 +53,22 @@ ul.forums{
 .header {
     color: #F5F5F5;
 }
+
+#site-search {
+    border-color: rgba(0, 0, 0, 0.075);
+}
+
+#site-search input, #site-search button {
+    background-color: transparent;
+    color: #4C4C4C;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}

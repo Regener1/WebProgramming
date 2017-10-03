@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>
-		My forum
+        My forum
     </title>
 
     <meta charset="utf-8">
-    <meta http-equiv="Refresh" content="0.01"/>
+<!--    <meta http-equiv="Refresh" content="0.01"/>-->
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/color.css" rel="stylesheet">
@@ -22,7 +22,9 @@
         <div class="chunk">
             <ul class="navmenu inlinelist dropdown">
                 <!--Dropdown menu-->
-                <li class="dropdown-container">Quick links
+
+                <li class="dropdown-container">
+                    <a href="#" onclick="down() ">Links</a>
                     <ul class="dropdown-content">
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Our rules</a></li>
@@ -41,12 +43,28 @@
 
     <div id="wrap-header">
         <div class="site-header light-gray">
-            <div class="site-logo"><a href="#"></a></div>
-            <ul class="site-menu inlinelist">
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Our rules</a></li>
-                <li><a href="#"></a></li>
-            </ul>
+            <div class="chunk">
+                <ul class="inlinelist"> <!--site-menu -->
+                    <div id="site-logo"><a class="site-logo" href="#"></a></div>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Our rules</a></li>
+                    <li><a href="#">asdasd</a></li>
+                    <div id="site-search">
+                        <form action="#" method="get">
+                            <fieldset>
+                                <input name="keywords" type="search" maxlength="128"
+                                       title="Search for keywords" size="20" placeholder="Search">
+                                <button type="submit" title="Search">
+                                    <i class="fa"></i>
+                                </button>
+                                <input type="hidden" name="style" value="2">
+                            </fieldset>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+
+
         </div>
     </div>
 </div>
@@ -129,5 +147,7 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="js/js_script.js" ></script>
 </body>
 </html>

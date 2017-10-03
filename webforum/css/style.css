@@ -79,7 +79,8 @@ img {
 }
 
 .navmenu {
-    margin:  0 60px 0 60px;
+    margin: 0;
+    padding: 0;
 }
 
 #wrap-header {
@@ -171,10 +172,76 @@ img {
 
 .site-menu{
     display: block;
+}
 
+.site-menu > li{
+    margin-left: 10px;
 }
 
 .dropdown-content{
     padding: 20px;
+    display: none;
+}
 
+#site-search fieldset {
+    font-size: 1em;
+}
+
+fieldset {
+    border-width: 0;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    height: 40px;
+
+}
+
+#site-search input {
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1em;
+    height: 40px;
+    padding: 0 0 0 20px;
+    width: 210px;
+    float: left;
+}
+
+
+#site-search button {
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+}
+
+#site-search {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    float: right;
+    margin: 24px 0;
+    position: relative;
+}
+
+#site-logo {
+    float: left;
+    line-height: 86px;
+    margin: 0 30px 0 0;
+    min-height: 90px;
+}
+
+.site-logo {
+    background-image: url("img/logo.png");
+    height: 17px;
+    width: 79px;
+}
+
+.site-logo{
+    display: inline-block;
+    vertical-align: middle;
 }
