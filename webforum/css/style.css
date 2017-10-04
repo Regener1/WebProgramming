@@ -97,13 +97,40 @@ img {
     width: 250px;
 }
 
+
+
+#forumlist-inner {
+    float: left;
+    width: 100%;
+}
+
 #sidebar +
 #forumlist {
     margin: 0 270px 0 0;
 }
 
+@media (max-width: 1000px){
+    #sidebar + #forumlist {
+        margin: 0;
+    }
+    #forumlist-inner {
+        width: 100%;
+    }
+    #sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .chunk {
+        padding: 0 10px;
+    }
+}
+
+
+
 #wrap-footer {
-    position: absolute;
+    display: inline-block;
     left: 0;
     bottom: 0;
     width: 100%;
