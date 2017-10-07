@@ -55,17 +55,7 @@ p {
     margin: 0 0 20px;
 }
 
-.footerblock > ul > li > a {
-    font-size: 1.3em;
-    line-height: 1.5;
-    margin: 0 0 20px;
-}
 
-.inner{
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 img {
     border-width: 0;
@@ -78,10 +68,6 @@ img {
     line-height: 45px;
 }
 
-.navmenu {
-    margin: 0;
-    padding: 0;
-}
 
 #wrap-header {
     font-size: 1.3em;
@@ -89,7 +75,8 @@ img {
 }
 
 #wrap-body {
-    margin: 60px;
+    padding: 20px 0 20px;
+    position: relative;
 }
 
 #sidebar {
@@ -109,25 +96,10 @@ img {
     margin: 0 270px 0 0;
 }
 
-@media (max-width: 1000px){
-    #sidebar + #forumlist {
-        margin: 0;
-    }
-    #forumlist-inner {
-        width: 100%;
-    }
-    #sidebar {
-        width: 100%;
-    }
+
+#site-search fieldset {
+    font-size: 1em;
 }
-
-@media (max-width: 600px) {
-    .chunk {
-        padding: 0 10px;
-    }
-}
-
-
 
 #wrap-footer {
     display: inline-block;
@@ -135,6 +107,64 @@ img {
     bottom: 0;
     width: 100%;
 }
+
+#site-search input {
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1em;
+    height: 40px;
+    padding: 0 0 0 20px;
+    width: 210px;
+    float: left;
+}
+
+
+#site-search button {
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+}
+
+#site-search {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    float: right;
+    margin: 24px 0;
+    position: relative;
+}
+
+#site-logo {
+    float: left;
+    line-height: 86px;
+    margin: 0 30px 0 0;
+    min-height: 90px;
+}
+
+.footerblock > ul > li > a {
+    font-size: 1.3em;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+.inner{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.navmenu {
+    margin: 0;
+    padding: 0;
+}
+
 
 .chunk {
     clear: both;
@@ -190,7 +220,6 @@ img {
 }
 
 .posts{
-
     margin-left: 50px;
 }
 .lastpost{
@@ -210,9 +239,7 @@ img {
     display: none;
 }
 
-#site-search fieldset {
-    font-size: 1em;
-}
+
 
 fieldset {
     border-width: 0;
@@ -222,45 +249,7 @@ fieldset {
 
 }
 
-#site-search input {
-    border: 0;
-    box-sizing: border-box;
-    display: inline-block;
-    font-size: 1em;
-    height: 40px;
-    padding: 0 0 0 20px;
-    width: 210px;
-    float: left;
-}
 
-
-#site-search button {
-    border: 0;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1em;
-    height: 40px;
-    line-height: 40px;
-    padding: 0;
-    text-align: center;
-    width: 40px;
-}
-
-#site-search {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    float: right;
-    margin: 24px 0;
-    position: relative;
-}
-
-#site-logo {
-    float: left;
-    line-height: 86px;
-    margin: 0 30px 0 0;
-    min-height: 90px;
-}
 
 .site-logo {
     background-image: url("img/logo.png");
@@ -271,4 +260,28 @@ fieldset {
 .site-logo{
     display: inline-block;
     vertical-align: middle;
+}
+
+
+@media (max-width: 1000px){
+
+    #sidebar + #forumlist {
+        margin: 0;
+    }
+    #forumlist-inner {
+        width: 100%;
+    }
+    #sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .chunk {
+        padding: 0 10px;
+    }
+
+    .footerblock {
+        width: 100%;
+    }
 }
