@@ -226,17 +226,12 @@ img {
     float: right;
 }
 
-.site-menu{
-    display: block;
-}
-
-.site-menu > li{
-    margin-left: 10px;
-}
-
 .dropdown-content{
     padding: 20px;
     display: none;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 0 2em #000;
 }
 
 
@@ -264,7 +259,6 @@ fieldset {
 
 
 @media (max-width: 1000px){
-
     #sidebar + #forumlist {
         margin: 0;
     }
@@ -283,5 +277,37 @@ fieldset {
 
     .footerblock {
         width: 100%;
+    }
+
+    .rowcontent > li.posts {
+        display: none;
+    }
+
+    .inlinelist > li > a.site-menu-item1-inner{
+        display: none;
+    }
+    .inlinelist > li.site-menu-item2{
+        display: none;
+    }
+    .inlinelist > li.site-menu-item3{
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    #site-logo{
+        text-align: center;
+        width: 100%;
+    }
+
+    #site-search{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 370px) {
+    .rowcontent > li.lastpost {
+        display: none;
     }
 }

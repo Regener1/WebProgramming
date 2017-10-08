@@ -24,9 +24,9 @@
                 <!--Dropdown menu-->
 
                 <li class="dropdown-container">
-                    <a href="#" onclick="down() ">Links</a>
+                    <a class="btn-link" href="#">Links</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.php">FAQ</a></li>
                         <li><a href="#">Our rules</a></li>
                         <li><a href="#">szfvzsdf</a></li>
                     </ul>
@@ -46,17 +46,14 @@
             <div class="chunk">
                 <ul class="inlinelist"> <!--site-menu -->
                     <div id="site-logo"><a class="site-logo" href="#"></a></div>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Our rules</a></li>
-                    <li><a href="#">asdasd</a></li>
+                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="#">FAQ</a></li>
+                    <li class="site-menu-item2"><a href="#">Our rules</a></li>
+                    <li class="site-menu-item3"><a href="#">asdasd</a></li>
                     <div id="site-search">
                         <form action="#" method="get">
                             <fieldset>
                                 <input name="keywords" type="search" maxlength="128"
                                        title="Search for keywords" size="20" placeholder="Search">
-                                <button type="submit" title="Search">
-                                    <i class="fa"></i>
-                                </button>
                                 <input type="hidden" name="style" value="2">
                             </fieldset>
                         </form>
@@ -150,6 +147,9 @@
     </div>
 </div>
 
-<script type="text/javascript" src="js/js_script.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/interface.js"></script>
+
 </body>
 </html>
