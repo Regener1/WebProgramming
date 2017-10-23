@@ -9,7 +9,7 @@
 
                     <fieldset class="fields2">
                         <dl>
-                            <dt><label for="username">Username:</label><br><span>Username must be between 6 characters and 20 characters long and use only alphanumeric characters.</span></dt>
+                            <dt><label for="username">Username:</label><br><span>Username must be between 4 characters and 16 characters long and use only alphanumeric characters.</span></dt>
                             <dd><input type="text" tabindex="1" name="username" id="username" size="25" value="" class="inputbox autowidth" title="Username"></dd>
                         </dl>
                         <dl>
@@ -26,20 +26,17 @@
                         </dl>
 
                     </fieldset>
+
+                    <div class="error"></div>
                 </div>
             </div>
-
             <div class="panel">
                 <div class="inner">
 
                     <fieldset class="submit-buttons">
-                        <input type="hidden" name="agreed" value="true">
-                        <input type="hidden" name="change_lang" value="0">
-                        <input type="hidden" name="confirm_id" value="dc28ffc6793217f500c27e2f74baaf79">
 
-                        <input type="reset" value="Reset" name="reset" class="button2"><input type="submit" tabindex="9" name="submit" id="submit" value="Submit" class="button1 default-submit-action">
-                        <input type="hidden" name="creation_time" value="1507632865">
-                        <input type="hidden" name="form_token" value="632801947501070c595c2de8790847fe5dd0292e">
+                        <input type="reset" value="Reset" name="reset" class="button2">
+                        <input type="submit" tabindex="9" name="submit" id="submit" value="Submit" class="button1 default-submit-action">
 
                     </fieldset>
 
@@ -48,5 +45,7 @@
         </form>
     </div>
 </div>
+
+<script type="text/javascript" src="js/validate.js"></script>
 
 <?php require('footer.php'); ?>

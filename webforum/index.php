@@ -1,5 +1,13 @@
 <?php require('header.php'); ?>
 
+<?php
+    require_once 'connection.php';
+    include 'model.php';
+    $link = Connect($host, $user, $password, $database);
+
+    $forumTitles = GetForumsTitles($link);
+?>
+
     <div id="wrap-body">
         <div class="chunk">
             <div id="sidebar">
@@ -22,8 +30,11 @@
                         <ul class="forums">
                             <li class="row">
                                 <ul class="rowcontent inlinelist">
-                                    <li class="theme"><a href="forums.php">Information</a></li>
-                                    <li class="posts">3 topics<br>2 posts</li>
+                                    <li class="theme"><a href="forums.php"><?php echo $forumTitles[0] ?></a></li>
+                                    <li class="posts">
+                                        <?php echo GetTopicCount($link, $forumTitles[0])?> topics<br>
+                                        <?php echo GetPostCount($link)?> posts
+                                    </li>
                                     <li class="lastpost">Re: <a href="#">Post Sample</a><br>by
                                         <a href="#">User123</a> 07 Dec 2015, 20:20
                                     </li>
@@ -31,8 +42,11 @@
                             </li>
                             <li class="row">
                                 <ul class="rowcontent inlinelist">
-                                    <li class="theme"><a href="#">Information</a></li>
-                                    <li class="posts">3 topics<br>2 posts</li>
+                                    <li class="theme"><a href="#"><?php echo $forumTitles[1] ?></a></li>
+                                    <li class="posts">
+                                        <?php echo GetTopicCount($link, $forumTitles[1])?> topics<br>
+                                        <?php echo GetPostCount($link)?> posts
+                                    </li>
                                     <li class="lastpost">Re: <a href="#">Post Sample</a><br>by
                                         <a href="#">User123</a> 07 Dec 2015, 20:20
                                     </li>
@@ -40,8 +54,11 @@
                             </li>
                             <li class="row">
                                 <ul class="rowcontent inlinelist">
-                                    <li class="theme"><a href="#">Information</a></li>
-                                    <li class="posts">3 topics<br>2 posts</li>
+                                    <li class="theme"><a href="#"><?php echo $forumTitles[2] ?></a></li>
+                                    <li class="posts">
+                                        <?php echo GetTopicCount($link, $forumTitles[2])?> topics<br>
+                                        <?php echo GetPostCount($link)?> posts
+                                    </li>
                                     <li class="lastpost">Re: <a href="#">Post Sample</a><br>by
                                         <a href="#">User123</a> 07 Dec 2015, 20:20
                                     </li>
@@ -53,5 +70,9 @@
             </div>
         </div>
     </div>
+
+<?php
+    Disconnect($link);
+?>
 
 <?php require('footer.php'); ?>

@@ -239,7 +239,7 @@ fieldset {
     border-width: 0;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 1.3em;
-    height: 40px;
+    /*height: 40px;*/
 
 }
 
@@ -366,10 +366,58 @@ fieldset.submit-buttons {
     vertical-align: middle;
 }
 
-fieldset {
-    border-width: 0;
+fieldset dl {
+    padding: 0 0 20px;
+    font-size: 1em !important;
+    float: left;
+    clear: both;
+}
+
+fieldset dt {
+    float: left;
+    width: 40%;
+    text-align: left;
+    display: block;
+    padding-top: 6.5px;
+}
+
+fieldset.fields2 dt {
+    width: 15em;
+}
+
+fieldset dd {
+    margin-left: 41%;
+    vertical-align: top;
+    line-height: 32px;
+}
+
+fieldset.fields2 dd {
+    margin-left: 16em;
+}
+
+.autowidth {
+    width: auto !important;
+}
+
+.inputbox {
+    border: 1px solid transparent;
+    height: 33px;
+    padding: 0 20px;
+    transition: border-color 0.1s ease-in-out;
+}
+
+
+
+a.button2, input.button2, input.button3 {
+    border: 1px solid transparent;
+}
+
+a.button1, input.button1, input.button3, a.button2, input.button2 {
+    width: auto !important;
+    height: 33px;
+    padding: 0 20px;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+    margin-left: 10px;
 }
 
 @media (max-width: 1000px) {
