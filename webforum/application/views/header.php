@@ -46,18 +46,9 @@
             <div class="chunk">
                 <ul class="inlinelist"> <!--site-menu -->
                     <div id="site-logo"><a class="site-logo" href="./index.php"></a></div>
-                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="#">FAQ</a></li>
+                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="/register">FAQ</a></li>
                     <li class="site-menu-item2"><a href="#">Our rules</a></li>
                     <li class="site-menu-item3"><a href="#">asdasd</a></li>
-                    <div id="site-search">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <input name="keywords" type="search" maxlength="128"
-                                       title="Search for keywords" size="20" placeholder="Search">
-                                <input type="hidden" name="style" value="2">
-                            </fieldset>
-                        </form>
-                    </div>
                 </ul>
             </div>
 

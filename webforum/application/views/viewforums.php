@@ -1,4 +1,3 @@
-<?php require('header.php'); ?>
 
 <?php
 require_once 'connection.php';
@@ -65,4 +64,3 @@ $topicsArr = GetAllTopicsById($link, $idForum);
     Disconnect($link);
 ?>
 
-<?php require('footer.php'); ?>

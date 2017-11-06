@@ -1,4 +1,4 @@
-<?php require('header.php'); ?>
+
 
 <div id="wrap-body">
     <div class="chunk">
@@ -47,4 +47,3 @@
 
 <!--<script type="text/javascript" src="js/validate.js"></script>-->
 
-<?php require('footer.php'); ?>

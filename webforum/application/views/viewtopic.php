@@ -1,4 +1,3 @@
-<?php require('header.php'); ?>
 
 
 <?php
@@ -71,4 +70,3 @@ $postsContent  = GetPostsContent($link, $idTopic);
 Disconnect($link);
 ?>
 
-<?php require('footer.php'); ?>
