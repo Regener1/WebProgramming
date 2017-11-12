@@ -1,72 +1,46 @@
-
-
-<?php
-require_once 'connection.php';
-include 'model.php';
-$link = Connect($host, $user, $password, $database);
-
-$idTopic = null;
-
-if (isset($_GET['tid'])) {
-    $idTopic = $_GET['tid'];
-}
-
-$topicContent = GetTopicContent($link, $idTopic);
-$postsContent  = GetPostsContent($link, $idTopic);
-
-?>
-
 <div id="wrap-body">
     <div class="chunk">
-
-<!--        <div class="buttons">-->
-<!--            <a href="#"-->
-<!--               class="button font-icon"-->
-<!--               title="Post a new topic">Post Reply</a>-->
-<!--        </div>-->
 
         <div class="forumpost">
             <div id="p1" class="post bg">
                 <div class="inner">
 
-                    <div class="postprofile"><?php echo $topicContent['author'] ?></div>
+                    <div class="postprofile"><?php echo $data[0]['author'] ?></div>
 
                     <div class="postbody">
-                        <h3 class="posttitle"><?php echo $topicContent['title'] ?></h3>
-                        <div class="posttime"><?php echo $topicContent['date'] ?></div>
+                        <h3 class="posttitle"><?php echo $data[0]['title'] ?></h3>
+                        <div class="posttime"><?php echo $data[0]['date'] ?></div>
                         <div class="postcontent">
-                            <?php echo $topicContent['text'] ?>
+                            <?php echo $data[0]['text'] ?>
                         </div>
+                        <?php if ($data[0]['file_path'] != 'null'): ?>
+                            <div class="postfile">
+                                <a href="http://webforum/<?php echo $data[0]['file_path'] ?>"
+                                   download><b><?php echo explode('/', $data[0]['file_path'])[1]; ?></b></a>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <?php
-        foreach ($postsContent as $value){
-            echo "<div class=\"forumpost\">
-            <div id=\"p1\" class=\"post bg\">
-                <div class=\"inner\">
+        <?php foreach ($data[1] as $row): ?>
+            <div class="forumpost">
+                <div id="p1" class="post bg">
+                    <div class="inner">
 
-                    <div class=\"postprofile\">".$value['author']."</div>
+                        <div class="postprofile"><?php echo $row['author'] ?></div>
 
-                    <div class=\"postbody\">
-                        <h3 class=\"posttitle\">Re: ".$topicContent['title']."</h3>
-                        <div class=\"posttime\">".$value['date']."</div>
-                        <div class=\"postcontent\">".$value['text']."</div>
+                        <div class="postbody">
+                            <h3 class="posttitle">Re: <?php echo $data[0]['title'] ?></h3>
+                            <div class="posttime"><?php echo $row['date'] ?></div>
+                            <div class="postcontent"><?php echo $row['text'] ?></div>
+                        </div>
+
                     </div>
-
                 </div>
             </div>
-        </div>";
-        }
-        ?>
-
+        <?php endforeach; ?>
     </div>
 </div>
-
-<?php
-Disconnect($link);
-?>
-

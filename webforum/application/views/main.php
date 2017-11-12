@@ -1,103 +1,56 @@
-
-
-<?php
-//require_once 'connection.php';
-//include 'model.php';
-//$link = Connect($host, $user, $password, $database);
-//
-//$forumTitles = GetForumsTitles($link);
-//?>
-
-    <div id="wrap-body">
-        <div class="chunk">
-            <div id="sidebar">
-                <div class="forumblock dark">
-                    <div class="header">Last posts</div>
-                    <ul class="forums inlinelist">
-                        <?php $lastPost = GetLastPostForForumView($link, $forumTitles[0]['title']); ?>
-                        <li class="rowcontent row">
-                            Re: <a href="#"><?php echo $lastPost['title']?></a><br>by
-                            <?php echo $lastPost['author']?> <?php echo $lastPost['date']?>
+<div id="wrap-body">
+    <div class="chunk">
+        <div id="sidebar">
+            <div class="forumblock dark">
+                <div class="header">Last posts</div>
+                <ul class="forums">
+                    <?php foreach ($data[1] as $lastPost): ?>
+                        <li class="row">
+                            <ul class="rowcontent inlinelist">
+                                <li style="font-size: 1.3em; padding: 10px 0 10px 10px;">
+                                <li class="lastpostpreview">
+                                    Re:
+                                    <a href="/viewtopic?id=<?php echo $lastPost[0]; ?>"><?php echo $lastPost[1] ?></a><br>by
+                                    <?php echo $lastPost[2] ?> <?php echo $lastPost[3] ?>
+                                </li>
+                                </li>
+                            </ul>
                         </li>
-                        <?php $lastPost = GetLastPostForForumView($link, $forumTitles[1]['title']); ?>
-                        <li class="rowcontent row">
-                            Re: <a href="#"><?php echo $lastPost['title']?></a><br>by
-                            <?php echo $lastPost['author']?> <?php echo $lastPost['date']?>
-                        </li>
-                        <?php $lastPost = GetLastPostForForumView($link, $forumTitles[2]['title']); ?>
-                        <li class="rowcontent row">
-                            Re: <a href="#"><?php echo $lastPost['title']?></a><br>by
-                            <?php echo $lastPost['author']?> <?php echo $lastPost['date']?>
-                        </li>
-
-                        </li>
-                    </ul>
-                </div>
+                    <?php endforeach; ?>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <div id="forumlist">
-                <div id="forumlist-inner">
-                    <div class="forumblock blue">
-                        <div class="header">Theme</div>
-                        <ul class="forums">
+        <div id="forumlist">
+            <div id="forumlist-inner">
+                <div class="forumblock blue">
+                    <div class="header">Theme</div>
+                    <ul class="forums ">
+
+                        <?php foreach ($data[0] as $forums): ?>
                             <li class="row">
                                 <ul class="rowcontent inlinelist">
                                     <li class="theme">
-                                        <a href="viewforums.php?fid=<?php echo $forumTitles[0]['id_forum'];?>">
-                                            <?php echo $forumTitles[0]['title']; ?>
+                                        <a href="/viewforums?id=<?php echo $forums[0]; ?>">
+                                            <?php echo $forums[1]; ?>
                                         </a></li>
                                     <li class="posts">
-                                        <?php echo GetTopicCount($link, $forumTitles[0]['title']);?> topics<br>
-                                        <?php echo GetPostCount($link, $forumTitles[0]['title']);?> posts
+                                        <?php echo $forums[2]; ?> topics<br>
+                                        <?php echo $forums[3]; ?> posts
                                     </li>
 
-                                    <?php $lastPost = GetLastPostForForumView($link, $forumTitles[0]['title']); ?>
-                                    <li class="lastpost">Re: <a href="#"><?php echo $lastPost['title']?></a><br>by
-                                        <?php echo $lastPost['author']?> <?php echo $lastPost['date']?>
+                                    <li class="lastpost">Re: <a href="/viewtopic?id=<?php echo $forums[4] ?>">
+                                            <?php echo $forums[5] ?></a><br>by
+                                        <?php echo $forums[6] ?> <?php echo $forums[7] ?>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="row">
-                                <ul class="rowcontent inlinelist">
-                                    <li class="theme">
-                                        <a href="viewforums.php?fid=<?php echo $forumTitles[1]['id_forum'];?>">
-                                            <?php echo $forumTitles[1]['title']; ?>
-                                        </a></li>
-                                    <li class="posts">
-                                        <?php echo GetTopicCount($link, $forumTitles[1]['title']); ?> topics<br>
-                                        <?php echo GetPostCount($link, $forumTitles[1]['title']); ?> posts
-                                    </li>
-
-                                    <?php $lastPost = GetLastPostForForumView($link, $forumTitles[1]['title']); ?>
-                                    <li class="lastpost">Re: <a href="#"><?php echo $lastPost['title']?></a><br>by
-                                        <?php echo $lastPost['author']?> <?php echo $lastPost['date']?>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="row">
-                                <ul class="rowcontent inlinelist">
-                                    <li class="theme">
-                                        <a href="viewforums.php?fid=<?php echo $forumTitles[2]['id_forum'];?>">
-                                            <?php echo $forumTitles[2]['title']; ?>
-                                        </a></li>
-                                    <li class="posts">
-                                        <?php echo GetTopicCount($link, $forumTitles[2]['title']); ?> topics<br>
-                                        <?php echo GetPostCount($link, $forumTitles[2]['title']); ?> posts
-                                    </li>
-
-                                    <?php $lastPost = GetLastPostForForumView($link, $forumTitles[2]['title']); ?>
-                                    <li class="lastpost">Re: <a href="#"><?php echo $lastPost['title']?></a><br>by
-                                        <?php echo $lastPost['author']?> <?php echo $lastPost['date']?>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-<?php
-//Disconnect($link);
-?>

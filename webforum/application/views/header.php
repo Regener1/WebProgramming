@@ -26,14 +26,14 @@
                 <li class="dropdown-container">
                     <a class="btn-link" href="#">Links</a>
                     <ul class="dropdown-content">
-                        <li><a href="index.php">FAQ</a></li>
+                        <li><a href="#">FAQ</a></li>
                         <li><a href="#">Our rules</a></li>
                         <li><a href="#">szfvzsdf</a></li>
                     </ul>
                 </li>
                 <!--Register-->
                 <li class="rightside">
-                    <a href="register.php">Register</a>
+                    <a href="/register">Register</a>
                 </li>
 
             </ul>
@@ -45,8 +45,8 @@
         <div class="site-header light-gray">
             <div class="chunk">
                 <ul class="inlinelist"> <!--site-menu -->
-                    <div id="site-logo"><a class="site-logo" href="./index.php"></a></div>
-                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="/register">FAQ</a></li>
+                    <div id="site-logo"><a class="site-logo" href="/main"></a></div>
+                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="#">FAQ</a></li>
                     <li class="site-menu-item2"><a href="#">Our rules</a></li>
                     <li class="site-menu-item3"><a href="#">asdasd</a></li>
                 </ul>

@@ -1,8 +1,6 @@
 <?php
 
-require_once 'connection.php';
-include 'model.php';
-$link = Connect($host, $user, $password, $database);
+
 
 function clean($value = "")
 {
@@ -33,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $title = $_POST['title'];
     $message = $_POST['message'];
-    $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
+    $uploadfile = $uploaddir.basename($HTTP_POST_FILES['uploadfile']['name']);
 
     $idForum = $_POST['idForum'];
 
@@ -49,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($username) && !empty($title) && !empty($message)) {
         if (check_length($username, 4, 30) && check_length($title, 4, 100)) {
 
-            if($_FILES['uploadfile']['size'] != 0){
-                if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+            if($HTTP_POST_FILES['uploadfile']['size'] != 0){
+                if (copy($HTTP_POST_FILES['uploadfile']['tmp_name'], $uploadfile))
                 {
                     echo "<h3>Файл успешно загружен на сервер</h3>";
 
@@ -69,6 +67,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header("Location: index.php");
 }
 
-
-
-Disconnect($link);

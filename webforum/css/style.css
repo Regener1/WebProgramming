@@ -227,6 +227,10 @@ label {
     float: right;
 }
 
+.lastpostpreview{
+    float: left;
+}
+
 .dropdown-content {
     padding: 20px;
     display: none;

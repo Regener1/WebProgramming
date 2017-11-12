@@ -1,25 +1,6 @@
-
-
-<?php
-function clean($value = "")
-{
-    $value = trim($value);
-    $value = stripslashes($value);
-    $value = strip_tags($value);
-    $value = htmlspecialchars($value);
-
-    return $value;
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $idForum = $_POST['idForum'];
-    $idForum = clean($idForum);
-}
-?>
-
 <div id="wrap-body">
     <div class="chunk">
-        <form enctype="multipart/form-data" action="createnewtopic.php" method="POST">
+        <form enctype="multipart/form-data" action="/checknewtopic" method="POST">
             <div class="forumpost">
                 <div id="p1" class="post bg">
                     <div class="inner">
@@ -48,21 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                       name="message" id="message"
                                       size="255" value=""
                                       cols="80" rows="10"
-                                      class="inputbox-message"></textarea>
+                                      class="inputbox-message" style="resize: none"></textarea>
 
                             <br>
 
                             <label>Files</label><br>
 
-                            <input type="hidden" name="idForum" value="<?php echo $idForum?>">
+                            <input type="hidden" name="idForum" value="<?php echo $data ?>">
                             <!-- Поле MAX_FILE_SIZE должно быть указано до поля загрузки файла -->
-                            <input type="hidden" name="MAX_FILE_SIZE" value="30000"/>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="3000000000"/>
                             <!-- Название элемента input определяет имя в массиве $_FILES -->
-                            Отправить этот файл: <input name="userfile" type="file"/>
+                            Send this file. File size must < 3 MB: <input name="userfile" type="file"/>
                         </div>
 
                         <input style="margin-left: 0px"
-                                type="submit" name="submit" id="submit"
+                               type="submit" name="submit" id="submit"
                                value="Post to forum" class="button1 default-submit-action">
                     </div>
                 </div>
