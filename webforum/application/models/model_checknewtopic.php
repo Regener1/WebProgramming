@@ -21,7 +21,7 @@ class Model_CheckNewTopic extends Model
     private function AddTopicWithFile($title, $text, $filepath, $username, $forumId)
     {
         $stmt = $this->link->prepare('insert into topics(title, text, date, file_path, author, forums_id_fk)
-              values(\'' . $title . '\',\'' . $text . '\', \'now()\',\'' . $filepath . '\',\'' . $username . '\',\'' . $forumId . '\')');
+              values(\'' . $title . '\',\'' . $text . '\', now(),\'' . $filepath . '\',\'' . $username . '\',\'' . $forumId . '\')');
         $stmt->execute();
 //        print_r($stmt->errorInfo());
     }

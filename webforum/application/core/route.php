@@ -31,12 +31,14 @@ class Route
         $controller_path = "application/controllers/" . $controller_file;
         if (file_exists($controller_path)) {
             include "application/controllers/" . $controller_file;
+
         } else {
             /*
             правильно было бы кинуть здесь исключение,
             но для упрощения сразу сделаем редирект на страницу 404
             */
-            echo 'file dont exist ' . $controller_path;
+            //echo 'file dont exist ' . $controller_path;
+            Route::ErrorPage404();
         }
 
         // создаем контроллер
@@ -49,8 +51,16 @@ class Route
 
         } else {
             // здесь также разумнее было бы кинуть исключение
-            echo 'method dont exist';
-
+            //echo 'method dont exist';
+            Route::ErrorPage404();
         }
+    }
+
+    function ErrorPage404()
+    {
+        $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        header('HTTP/1.1 404 Not Found');
+        header("Status: 404 Not Found");
+        header('Location:' . $host . '404');
     }
 }

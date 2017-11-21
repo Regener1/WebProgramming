@@ -67,6 +67,31 @@ label {
     font-size: 1.5em;
 }
 
+#toTop {
+    height: 100%;
+    width: 100px;
+    background: #00000052;
+    text-align: center;
+    padding: 5px;
+    position: fixed; /* this is the magic */
+    bottom: 0; /* together with this to put the div at the bottom*/
+    right: 0;
+    cursor: pointer;
+    display: none;
+    color: #333;
+    font-family: verdana;
+    font-size: 11px;
+}
+
+#toTop img {
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    repeat: no-repeat;
+    width: 50%;
+
+}
+
 #wrap-nav {
     clear: both;
     font-size: 1.1em;
@@ -227,7 +252,7 @@ label {
     float: right;
 }
 
-.lastpostpreview{
+.lastpostpreview {
     float: left;
 }
 
@@ -365,6 +390,7 @@ fieldset {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 1.3em;
 }
+
 fieldset.submit-buttons {
     text-align: center;
     vertical-align: middle;
@@ -409,8 +435,6 @@ fieldset.fields2 dd {
     padding: 0 20px;
     transition: border-color 0.1s ease-in-out;
 }
-
-
 
 a.button2, input.button2, input.button3 {
     border: 1px solid transparent;
@@ -468,7 +492,26 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
         width: 100%;
     }
 
+    fieldset dt {
+        padding-bottom: 6.5px;
+    }
+
     .postbody {
+        width: 100%;
+    }
+
+    fieldset dt, fieldset dd {
+        clear: both;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    .inputbox {
+        width: 100% !important;
+    }
+
+    textarea{
         width: 100%;
     }
 }

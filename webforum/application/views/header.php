@@ -23,14 +23,14 @@
             <ul class="navmenu inlinelist dropdown">
                 <!--Dropdown menu-->
 
-                <li class="dropdown-container">
-                    <a class="btn-link" href="#">Links</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Our rules</a></li>
-                        <li><a href="#">szfvzsdf</a></li>
-                    </ul>
-                </li>
+<!--                <li class="dropdown-container">-->
+<!--                    <a class="btn-link" href="#">Links</a>-->
+<!--                    <ul class="dropdown-content">-->
+<!--                        <li><a href="#">FAQ</a></li>-->
+<!--                        <li><a href="#">Our rules</a></li>-->
+<!--                        <li><a href="#">szfvzsdf</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
                 <!--Register-->
                 <li class="rightside">
                     <a href="/register">Register</a>
@@ -46,9 +46,9 @@
             <div class="chunk">
                 <ul class="inlinelist"> <!--site-menu -->
                     <div id="site-logo"><a class="site-logo" href="/main"></a></div>
-                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="#">FAQ</a></li>
-                    <li class="site-menu-item2"><a href="#">Our rules</a></li>
-                    <li class="site-menu-item3"><a href="#">asdasd</a></li>
+                    <li class="site-menu-item1"><a class="site-menu-item1-inner" href="#"></a></li>
+<!--                    <li class="site-menu-item2"><a href="#"></a></li>-->
+<!--                    <li class="site-menu-item3"><a href="#">asdasd</a></li>-->
                 </ul>
             </div>
 

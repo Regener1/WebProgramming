@@ -1,12 +1,13 @@
-/**
- * Created by Regener on 08.10.2017.
- */
-$(document).ready(function () {
-
-    $('.dropdown-container a.btn-link').click(function () {
-            $('.dropdown-content').slideToggle('slow');
+$(function() {
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
         }
-    )
+    });
 
-
-})
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    });
+});

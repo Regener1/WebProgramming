@@ -42,5 +42,7 @@
                 </div>
             </div>
         <?php endforeach; ?>
+
+        <div id="toTop"><img src="js/up-arrow.png" ></div>
     </div>
 </div>

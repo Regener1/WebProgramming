@@ -1,7 +1,7 @@
 <div id="wrap-body">
     <div class="chunk">
-        <form id="register" method="post" action="/checkregister">
-
+        <form id="register" >
+<!--            method="post" action="/checkregister"-->
             <div class="panel">
                 <div class="inner">
 
@@ -41,7 +41,7 @@
                     <fieldset class="submit-buttons">
 
                         <input type="reset" value="Reset" name="reset" class="button2">
-                        <input type="submit" tabindex="9" name="submit" id="submit" value="Submit"
+                        <input type="button" onclick="validateRegister" tabindex="9" name="submit" id="submit" value="Submit"
                                class="button1 default-submit-action">
 
                     </fieldset>

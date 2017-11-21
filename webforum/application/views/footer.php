@@ -9,13 +9,13 @@
                     natoq</p>
             </div>
 
-            <div class="footerblock">
-                <h5>You Must Know</h5>
-                <ul>
-                    <li><a href="#">Our rules</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
+<!--            <div class="footerblock">-->
+<!--                <h5>You Must Know</h5>-->
+<!--                <ul>-->
+<!--                    <li><a href="#">Our rules</a></li>-->
+<!--                    <li><a href="#">FAQ</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
 
             <div class="footerblock">
                 <h5>Contact us</h5>
